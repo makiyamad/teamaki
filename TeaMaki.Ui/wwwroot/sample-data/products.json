@@ -1,0 +1,12 @@
+[{
+	"ProductId": "ffc84058-37d9-43ea-95bf-ff577cfba03b",
+    "Name": "Sea Combo",
+    "Description" : "Temaki, Nigiris & Hot roll sushi",
+    "ImagePath": "img/sea-combo.jpg"
+},
+{
+	"ProductId": "5951156f-9215-430e-8301-03a5ce3a61be",
+    "Name": "Basic Combo",
+    "Description" : "Nigiris & sushi",
+    "ImagePath": "img/basic-combo.jpg"
+}]

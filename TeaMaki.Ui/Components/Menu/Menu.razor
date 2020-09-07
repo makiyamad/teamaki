@@ -1,0 +1,48 @@
+@inject IProductService ProductService
+
+<Styled>
+    product-card{
+        max-width:300px;
+    }
+
+    product-info button {
+        position:absolute;
+        bottom: 0px;
+        right: 0px;
+        margin: 10px;
+    }
+
+    product-info {
+        background: -moz-linear-gradient(-90deg, rgba(0, 0, 0, 0.7), rgba(251, 193, 130, 0.1) 100%);
+        background: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.7), rgba(251, 193, 130, 0.1) 100%);
+        background: linear-gradient(to -90  deg, rgba(0, 0, 0, 0.7), rgba(251, 193, 130, 0.1) 100%);
+    }
+
+</Styled>
+
+@if(_products == null){
+    <div>Loading...</div>    
+}else{
+    foreach(var product in _products){
+
+    <product-card class="card bg-dark text-white border-0" >
+        <img src="@product.ImagePath" alt="@product.Name" class="card-img"/>
+        <product-info class="card-img-overlay" >
+            <product-title><h3>@product.Name</h3></product-title>
+            <product-description>@product.Description</product-description>
+            <button class="btn btn-primary" >add to cart</button>
+        </product-info>
+    </product-card>
+
+    }    
+}
+
+@code {
+
+private ProductResponse[] _products;
+
+protected override async Task OnInitializedAsync(){
+    _products = await ProductService.GetProducts();
+}
+
+}
