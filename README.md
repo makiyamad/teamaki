@@ -3,4 +3,4 @@ Order Taking System
 
 This is the UI layer of the TeaMaki site. 
 
-TeaMaki is a sample application created to play with Visual Studio Code, PlantUML, Blazor, .NET Core, HTML, CSS, Razor, and BlazorStyled.
+TeaMaki.UI is a sample application created to play with Visual Studio Code, PlantUML, Blazor, .NET Core, HTML, CSS, Razor, and BlazorStyled.
